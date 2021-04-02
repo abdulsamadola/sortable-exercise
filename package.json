@@ -1,0 +1,26 @@
+{
+  "name": "sortable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "concurrently --kill-others-on-fail \"cd client && yarn run start\" \"npm run server\"",
+    "client:build": "cd client && yarn run build"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

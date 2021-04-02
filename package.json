@@ -15,7 +15,8 @@
   "scripts": {
     "server": "nodemon server.js",
     "start": "concurrently --kill-others-on-fail \"cd client && yarn run start\" \"npm run server\"",
-    "client:build": "cd client && yarn run build"
+    "client:build": "cd client && yarn run build",
+    "heroku-postbuild": "cd client && yarn --only=dev && yarn && yarn run build"
   },
   "engines": {
     "node": "14.x"

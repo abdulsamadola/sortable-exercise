@@ -26,13 +26,14 @@
 
 > **Sortable Frontend Exercise** This exercise will evaluate your skills in front-end web development using different technologies.
 
+### LIVE DEMO:: https://sortable-exercise.herokuapp.com/
 
 ### Build with
 
 - [React JS](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Node.js](https://nodejs.org/)
-- [HTML/CSS](hhttps://www.w3schools.com/html/html_css.asp)
+- [HTML/CSS](https://www.w3schools.com/html/html_css.asp)
 - [SASS](https://sass-lang.com/)
 - [Redux](https://redux.js.org/)
 - [Jest](https://jestjs.io/)
@@ -58,7 +59,7 @@ $ git clone https://github.com/abdulsamadola/sortable-exercise.git
 $ cd sortable-exercise
 ```
 
-3. **_Install dependencies_**
+3. **Install dependencies**
 
 ```sh
 $ npm install 
@@ -86,9 +87,7 @@ $ npm run build
 
 <div align="center">
  
-![image](https://github.com/abdulsamadola/sortable-exercise/blob/master/screenshots/1.png)
-
-<hr />
+![image](https://github.com/abdulsamadola/sortable-exercise/blob/main/screenshots/1.png)
 
 </div>
 

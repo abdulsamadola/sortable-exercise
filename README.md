@@ -66,7 +66,7 @@ $ npm install
 4. **cd client**
 
 ```sh
-$ yarn install 
+$ npm install 
 ### Running
 
 1. **_Running on development mode_**
@@ -79,7 +79,7 @@ $ npm run start
 2. **Build for production**
 
 ```sh
-$ yarn run build
+$ npm run build
 ```
 
 ### Screenshots
@@ -97,48 +97,51 @@ $ yarn run build
 <pre>
 |-- Sortable Frontend Exercise
     |-- .DS_Store
+    |-- .gitignore
     |-- README.md
     |-- package-lock.json
     |-- package.json
     |-- server.js
     |-- client
-        |-- .DS_Store
-        |-- .gitignore
-        |-- README.md
-        |-- package.json
-        |-- tsconfig.json
-        |-- yarn-error.log
-        |-- yarn.lock
-        |-- public
-        |   |-- favicon.ico
-        |   |-- index.html
-        |   |-- logo192.png
-        |   |-- logo512.png
-        |   |-- manifest.json
-        |   |-- robots.txt
-        |-- src
-            |-- index.tsx
-            |-- react-app-env.d.ts
-            |-- setupTests.ts
-            |-- components
-            |   |-- App
-            |       |-- App.tsx
-            |       |-- OrderTable.tsx
-            |       |-- __tests__
-            |           |-- OrderTable.test.tsx
-            |-- services
-            |   |-- index.ts
-            |   |-- orderService.ts
-            |-- store
-            |   |-- actions.ts
-            |   |-- effects.ts
-            |   |-- reducer.ts
-            |   |-- types.ts
-            |-- styles
-            |   |-- App.scss
-            |-- utils
-                |-- constants.ts
-                |-- dateFormat.ts
+    |   |-- .DS_Store
+    |   |-- .gitignore
+    |   |-- README.md
+    |   |-- package.json
+    |   |-- tsconfig.json
+    |   |-- public
+    |   |   |-- favicon.ico
+    |   |   |-- index.html
+    |   |   |-- logo192.png
+    |   |   |-- logo512.png
+    |   |   |-- manifest.json
+    |   |   |-- robots.txt
+    |   |-- src
+    |       |-- index.tsx
+    |       |-- react-app-env.d.ts
+    |       |-- setupTests.ts
+    |       |-- components
+    |       |   |-- App
+    |       |       |-- App.tsx
+    |       |       |-- OrderTable.tsx
+    |       |       |-- __tests__
+    |       |           |-- OrderTable.test.tsx
+    |       |-- services
+    |       |   |-- index.ts
+    |       |   |-- orderService.ts
+    |       |-- store
+    |       |   |-- actions.ts
+    |       |   |-- effects.ts
+    |       |   |-- reducer.ts
+    |       |   |-- types.ts
+    |       |-- styles
+    |       |   |-- App.scss
+    |       |-- utils
+    |           |-- constants.ts
+    |           |-- dateFormat.ts
+    |           |-- sorting.ts
+    |-- screenshots
+        |-- 1.png
+
 </pre>
 
 ## Unit testing
@@ -150,7 +153,7 @@ $ yarn run build
 > Run the following command.
 
 ```sh
-yarn run test
+npm run test
 ```
 
 

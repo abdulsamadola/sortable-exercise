@@ -14,8 +14,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "start:dev": "concurrently --kill-others-on-fail \"cd client && yarn run start\" \"npm run server\"",
-    "client:build": "cd client && yarn run build",
+    "start:dev": "concurrently --kill-others-on-fail \"cd client && npm run start\" \"nodemon server.js\"",
+    "client:build": "cd client && npm run build",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "engines": {

@@ -8,6 +8,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { IProps, Order } from '../../store/types';
 import dateFormat from '../../utils/dateFormat';
 import { Colors } from '../../utils/constants';
+import sorting from '../../utils/sorting';
 
 const useSortableData = (items: Order[] | any, config = null) => {
     
@@ -17,37 +18,9 @@ const useSortableData = (items: Order[] | any, config = null) => {
 
 	React.useMemo(
 		() => {
-			let sortableItems = [ ...items ];
-			if (sortConfig !== null) {
-				const sortKeys = sortConfig.key.split('.');
 
-				const getValue = (object: Order, keys: string) =>
-					keys.split('.').reduce((o:Order | any, k: string) => (o || {})[k], object);
+			const sortableItems = sorting(items, sortConfig);
 
-				if (sortKeys.length > 1) {
-					// For nested object keys
-					sortableItems.sort((a, b) => {
-						if (getValue(a, sortConfig.key) < getValue(b, sortConfig.key)) {
-							return sortConfig.direction === 'ascending' ? -1 : 1;
-						}
-						if (getValue(a, sortConfig.key) > getValue(b, sortConfig.key)) {
-							return sortConfig.direction === 'ascending' ? 1 : -1;
-						}
-						return 0;
-					});
-				} else {
-					// For non-nested object keys
-					sortableItems.sort((a, b) => {
-						if (a[sortConfig.key] < b[sortConfig.key]) {
-							return sortConfig.direction === 'ascending' ? -1 : 1;
-						}
-						if (a[sortConfig.key] > b[sortConfig.key]) {
-							return sortConfig.direction === 'ascending' ? 1 : -1;
-						}
-						return 0;
-					});
-				}
-			}
 			// Set the Data with `isChecked` property for checkbox tracking
 			setData(
 				sortableItems.map((item) => ({
